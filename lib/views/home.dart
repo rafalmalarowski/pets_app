@@ -80,7 +80,8 @@ class _HomeState extends State<Home> {
                         child: ListTile(
                           leading: Icon(Icons.handshake),
                           title: Text(foundPets[index]['name']),
-                          subtitle: Text(foundPets[index]['breed'].toString()),
+                          subtitle: Text(foundPets[index]['breed'] ??
+                              'no breed'.toString()),
                           onTap: () {
                             Navigator.push(
                               context,
